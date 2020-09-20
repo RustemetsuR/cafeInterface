@@ -21,9 +21,7 @@ const store = createStore(
 
 const app = (
   <Provider store={store}>
-
     <App />
-
   </Provider>
 
 );
