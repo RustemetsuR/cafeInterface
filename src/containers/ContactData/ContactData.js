@@ -14,10 +14,10 @@ const ContactData = () => {
 
     const dispatch = useDispatch();
 
-    const changedData = event =>{
+    const changedData = event => {
         const value = event.target.value;
         const targetName = event.target.name;
-        dispatch(changeContactData(targetName,value));
+        dispatch(changeContactData(targetName, value));
     }
 
     const createFetchOrder = async event => {
@@ -38,12 +38,12 @@ const ContactData = () => {
                 street: street,
             },
             foodsInCart,
-        }
+        };
 
         dispatch(createOrder(order));
         dispatch(clear());
         dispatch(clearContactData());
-    }
+    };
 
 
 
@@ -51,17 +51,29 @@ const ContactData = () => {
 
     return (
         <form className='contact-data' onSubmit={createFetchOrder}>
+
             <div className='form-element'>
                 <label htmlFor='name'>Name: </label>
-                <input onChange={changedData} value={name} placeholder='Example Examplovich' id='name' name='name' required />
+                <input
+                    onChange={changedData} value={name} required
+                    placeholder='Example Examplovich'
+                    id='name' name='name' />
             </div>
+
             <div className='form-element'>
                 <label htmlFor='phone'>Phone Number: </label>
-                <input onChange={changedData} value={phone} placeholder='0999-999-999' id='phone' name='phone' type="tel" required />
+                <input
+                    onChange={changedData} value={phone} required
+                    placeholder='0999-999-999'
+                    id='phone' name='phone' type="tel" />
             </div>
+
             <div className='form-element'>
                 <label htmlFor='street'>Street: </label>
-                <input onChange={changedData} value={street} placeholder="Pushkin's Street" id='Street' name='street' type='text' required />
+                <input
+                    onChange={changedData} value={street} required
+                    placeholder="Pushkin's Street"
+                    id='Street' name='street' type='text' />
             </div>
 
             <button type='submit'>Create An Order</button>
