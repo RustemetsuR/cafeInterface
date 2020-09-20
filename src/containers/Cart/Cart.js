@@ -12,20 +12,20 @@ const Cart = () => {
 
     const cart = useSelector(state => state.menu.cart);
     const totalPrice = useSelector(state => state.menu.totalPrice);
-    const modal = useSelector(state => state.menu.modal)
+    const modal = useSelector(state => state.menu.modal);
 
     const remove = id => {
         const index = cart.findIndex(cart => cart.id === id);
         dispatch(removeFromCart(cart[index].id));
-    }
+    };
 
     const showModal = () => {
-        dispatch(setModal(true))
-    }
+        dispatch(setModal(true));
+    };
 
     const hideModal = () => {
         dispatch(setModal(false));
-    }
+    };
 
 
     return (
