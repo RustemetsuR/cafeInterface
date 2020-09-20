@@ -13,12 +13,12 @@ const orderSuccess = () => {
 };
 
 export const changeContactData = (name, value) => {
-    return { type: CHANGE_CONTACT_DATA, name, value }
-}
+    return { type: CHANGE_CONTACT_DATA, name, value };
+};
 
 export const clearContactData = () => {
     return { type: CLEAR_CONTACT_DATA };
-}
+};
 
 export const createOrder = (order) => {
     return async dispatch => {
