@@ -1,0 +1,18 @@
+.contact-data{
+    padding: 25px 50px;
+}
+
+.form-element{
+    display: block;
+}
+
+.contact-data label{
+    width: 50%;
+    margin-right: 20px;
+}
+
+.contact-data input{
+    padding: 10px 5px;
+    margin: 10px 0;
+    width: 50%;
+}

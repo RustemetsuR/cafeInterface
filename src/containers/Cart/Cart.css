@@ -1,0 +1,9 @@
+.cart-box{
+    padding: 10px;
+}
+
+.orders-box{
+    height: 250px;
+    border-bottom: 1px solid black;
+    overflow-y: scroll;
+}
