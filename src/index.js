@@ -3,11 +3,33 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import menuReducer from './store/reducers/menuReducer';
+import ordersReducer from './store/reducers/ordersReducer';
+import thunkMiddleware from 'redux-thunk';
+import { Provider } from 'react-redux';
+
+const rootReducer = combineReducers({
+  menu: menuReducer,
+  orders: ordersReducer,
+});
+
+const store = createStore(
+  rootReducer,
+  applyMiddleware(thunkMiddleware),
+);
+
+const app = (
+  <Provider store={store}>
+
+    <App />
+
+  </Provider>
+
+);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  app,
   document.getElementById('root')
 );
 
