@@ -1,0 +1,46 @@
+.menu-item{
+    border: 1px solid black;
+    width: 90%;
+    margin: 10px 0;
+    padding: 15px;
+    height: 75px;
+    display: inline-block;
+    position: relative;
+}
+
+.menu-food-image{
+    display: inline-block;
+    width: 100px;
+    border: 1px solid black;
+    height: 75px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.menu-food-name{
+    position: absolute;
+    top: 30px;
+    left: 40%;
+    margin: 0;
+    display: inline-block;
+    padding: 0;
+}
+
+.menu-food-price{
+    position: absolute;
+    top: 50px;
+    left: 40%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.menu-item button{
+    border: 1px solid black;
+    background: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 70px;
+    left: 40%;
+}
