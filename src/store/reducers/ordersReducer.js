@@ -6,7 +6,7 @@ const initialState = {
     name: '',
     phone: '',
     street: '',
-}
+};
 
 const ordersReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -19,19 +19,19 @@ const ordersReducer = (state = initialState, action) => {
         case CHANGE_CONTACT_DATA:
             switch (action.name) {
                 case 'name':
-                    return { ...state, name: action.value }
+                    return { ...state, name: action.value };
                 case 'phone':
-                    return { ...state, phone: action.value }
+                    return { ...state, phone: action.value };
                 case 'street':
-                    return { ...state, street: action.value }
+                    return { ...state, street: action.value };
                 default:
-                    return { ...state }
-            }
+                    return { ...state };
+            };
         case CLEAR_CONTACT_DATA:
-            return { ...state, name: '', phone: '', street: '' }
+            return { ...state, name: '', phone: '', street: '' };
         default:
-            return state
-    }
+            return state;
+    };
 };
 
 
