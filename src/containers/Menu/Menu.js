@@ -18,7 +18,7 @@ const Menu = () => {
     const add = id => {
         const index = menu.findIndex(menu => menu.id === id);
         dispatch(addToCart(menu[index].id));
-    }
+    };
 
     return (
         <div className='menu-box'>
